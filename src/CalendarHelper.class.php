@@ -14,7 +14,7 @@ class CalendarHelper extends \DateTime {
         } else {
             $weekday--;
         }
-        $json = file_get_contents("dayofweek.json");
+        $json = file_get_contents(__DIR__."/dayofweek.json");
         $daysofweek = json_decode($json);
         if (!array_key_exists($lang, $daysofweek)) {
             throw new \Exception($lang." language not (yet) supported", 1);

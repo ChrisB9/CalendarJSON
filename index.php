@@ -7,9 +7,9 @@ require 'src/Day.class.php';
 require 'src/CalendarDayObject.class.php';
 require 'src/Calendar.class.php';
 
-$year = $_GET["year"];
-if (!isset($year) || $year == null) {
-	$year = date('Y');
+$year = $year = date('Y');
+if (isset($_GET["year"])) {
+	$year = $_GET["year"];
 }
 $calendar = new cbenco\Calendar($year);
 print_r($calendar->__to_sorted_json());

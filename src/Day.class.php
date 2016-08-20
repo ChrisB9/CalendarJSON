@@ -33,9 +33,6 @@ class Day extends CalendarHelper {
     public function getWeekday() {
         return $this->weekday;
     }
-    public function getWeekdayName() {
-        return parent::getWeekdayName($this->weekday, "de");
-    }
     private function setWeekday() {
         $datestring = parent::stringToDate($this->day, $this->month);
         $this->weekday = $datestring->format('N');

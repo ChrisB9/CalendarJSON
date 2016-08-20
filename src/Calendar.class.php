@@ -41,7 +41,7 @@ class Calendar extends Day {
                     "properties" => array(
                         "week" => $calendardayobject->week,
                         "weekday" => $calendardayobject->weekday,
-                        "weekdayname" => parent::getWeekdayName(),
+                        "weekdayname" => parent::getWeekdayName($calendardayobject->weekday, "de"),
                         "isWeekend" => $calendardayobject->isWeekend,
                         "isToday" => $calendardayobject->isToday
                     )
